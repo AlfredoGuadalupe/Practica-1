@@ -4,7 +4,7 @@
 
 int main(void){
 	char n=164,g=248;
-	short i,j,k,z,a,e,year[]={2005, 2010, 2015, 2019};
+	short i,j,k,z,a,e,year[4]={2005, 2010, 2015, 2019};
 	int edo=3;
 	int mes=3;
 	int anio=1;

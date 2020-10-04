@@ -23,15 +23,15 @@ int main(void){
 					y= temperatura[j][k][i];
 					e=j+1;
 					z=k+1;
-					a=1;
+					a=i;
 				}
 			}
 			x = x/mes;
-        	printf("\t\tEstado %d: %f C\n",j+1,x);
+        	printf("\t\tEstado %d: %f%cC\n",j+1,x,g);
         	x=0;
 		}
 		printf("La maxima temperatura del a%co %d es: \n\t%f%cC en el estado %d, el mes %d",n,year[a],y,g,e,z);
-		printf("\n\n");
+		printf("\n\n%c",g);
 	}
 	printf("Para salir presione cualquier tecla");
 	getchar();

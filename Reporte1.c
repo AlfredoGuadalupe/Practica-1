@@ -9,8 +9,8 @@ int main(void){
 	int mes=3;
 	int anio=1;
 	float x,y=0,temperatura[edo][mes][anio] = {{{22.6},{22.9},{30.1}},
-		                         	     	 {{30.8},{31.9},{27.9}},
-		                                	 {{26.0},{26.0},{26.3}}};
+		                         	   {{30.8},{31.9},{27.9}},
+		                               	   {{26.0},{26.0},{26.3}}};
 
 	printf("Temperatura promedio Anual por estado:\n");
   
@@ -27,8 +27,8 @@ int main(void){
 				}
 			}
 			x = x/mes;
-        	printf("\t\tEstado %d: %f%cC\n",j+1,x,g);
-        	x=0;
+        		printf("\t\tEstado %d: %f%cC\n",j+1,x,g);
+        		x=0;
 		}
 		printf("La maxima temperatura del a%co %d es: \n\t%f%cC en el estado %d, el mes %d",n,year[a],y,g,e,z);
 		printf("\n\n%c",g);

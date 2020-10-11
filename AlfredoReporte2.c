@@ -12,8 +12,8 @@ int main(){
     scanf("%i",&n);
     
     for(i=0;i<n;i++){
-    	/*printf("\tIngrese el numero de cuenta del alumno %i (sin guion ni espacios):\n\t\t",i+1);
-		scanf("%i",&alu[i][j]);*/
+    		printf("\tIngrese el numero de cuenta del alumno %i (sin guion ni espacios):\n\t\t",i+1);
+		scanf("%i",&alu[i][j]);
 		printf("\tIngrese la edad del alumno %i (solo la cifra):\n\t\t",i+1);
 		scanf("%i",&alu[i][j+1]);
 		printf("\tIngrese la calificacion del alumno %i (en entero):\n\t\t",i+1);

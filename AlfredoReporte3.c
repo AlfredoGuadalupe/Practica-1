@@ -1,11 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 /*
 	Compilado en DevC++ 5.11
 	
 	Alcántara Guerrero Alfredo Guadalupe
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+
 
 struct atleta{
 	char nombre[30];
@@ -27,7 +28,12 @@ int main(){
 		scanf("%i",&op);
 		switch(op){
 			case 1:
-				guardar(&a);
+				if(a<10){
+					guardar(&a);
+				}else{
+					printf("\tNo es posible agragar otro atleta el maximo de atletas ha sido excedido (10)\n\n");
+					op=2;
+				}
 				break;
 			case 2:
 				printf("\n");
@@ -45,7 +51,7 @@ int main(){
 }
 
 void menu(){
-	printf("Ingresar un nuevo atleta: \n");
+	printf("Ingresar un nuevo atleta?: \n");
 	printf("\t1. Si\n");
 	printf("\t2. No\n");
 }

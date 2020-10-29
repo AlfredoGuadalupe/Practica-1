@@ -90,7 +90,7 @@ int main (){
     				printf("\n**********La pila est%c vacia**********\n",a);
 				}
 				else{
-    				printf("La pila tiene %d elementos): \n",apunta->tamanio);
+    				printf ("\nPila (%d elementos): \n",apunta->tamanio);
     				printf("\n********** Tope de la PILA **********\n");
     				muestra(apunta);
    					printf("__________ Bajo de la PILA __________\n\n");

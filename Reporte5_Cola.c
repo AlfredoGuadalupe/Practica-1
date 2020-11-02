@@ -15,7 +15,7 @@ void Imprimir(pNodo *primero, pNodo *ultimo);
 int main() {
    pNodo primero = NULL, ultimo = NULL;
    int a=-96, o=-94,op=0,x,u=-93; 
-   printf("Bienvenido");
+   printf("**********Bienvenido**********");
    do{
     	printf("\nSelecciona una opci%cn\n\t1)QUEUE\n\t2)DEQUEUE\n\t3)Imprimir cola\n\t4)Salir\n",o);
     	scanf("%d",&op);
@@ -59,14 +59,19 @@ void Insertar(pNodo *primero, pNodo *ultimo, int v) {
 	pNodo nuevo;
 	
 	nuevo = (pNodo)malloc(sizeof(tipoNodo));
-	nuevo->valor = v;
-	nuevo->siguiente = NULL;
-
- 	if(*ultimo) 
-    	(*ultimo)->siguiente = nuevo;
-   	*ultimo = nuevo; 
-   	if(!*primero) 
-    	*primero = nuevo; 
+	if(nuevo != NULL){
+		nuevo->valor = v;
+		nuevo->siguiente = NULL;
+		
+ 		if(*ultimo) 
+    		(*ultimo)->siguiente = nuevo;
+   		*ultimo = nuevo; 
+   		if(!*primero) 
+    		*primero = nuevo; 
+	}else{
+		printf("No se pudo reservar memoria\n");
+	}
+	
 }
 
 int Eliminar(pNodo *primero, pNodo *ultimo) {
@@ -88,8 +93,8 @@ int Eliminar(pNodo *primero, pNodo *ultimo) {
 void Imprimir(pNodo *primero, pNodo *ultimo) {
 	pNodo nodo, nodo2=NULL;
 	nodo = *primero;
-	do{
+	while(nodo != nodo2){
 		printf("\t\t%d\n", nodo->valor);
 		nodo = nodo->siguiente;
-	}while(nodo != nodo2);
+	}
 }
